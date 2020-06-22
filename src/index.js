@@ -9,7 +9,7 @@ import { Provider } from 'react-redux';
 
 // 스토어는 리덕스에서 가장 핵심적인 인스턴스다. 
 // 이 안에 현재 상태를 내장하고 있고, 구독(subscribe)중인 함수들의 상태가 업데이트될 때마다 다시 실행되게 해준다.
-const store = createStore(reducers);
+const store = createStore(reducers, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()); // chrome redux devtools 이용하기 위함
 
 ReactDOM.render(
   <Provider store={store}>
