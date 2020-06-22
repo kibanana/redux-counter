@@ -10,9 +10,10 @@ import { connect } from 'react-redux';
 import { getRandomColor } from '../utils';
 
 // store 내의 state 값을 props에 연결한다.
+// prop값: state값
 const mapStateToProps = (state) => ({
-  color: state.color,
-  number: state.number,
+  color: state.colorData.color,
+  number: state.numberData.number,
 });
 
 // 액션 생성자를 사용해서 액션을 생성하고 해당 액션을 dispatch하는 함수를 만들고 이를 props에 연결한다.
